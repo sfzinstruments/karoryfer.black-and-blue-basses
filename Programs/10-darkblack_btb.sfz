@@ -1,0 +1,123 @@
+<control>
+label_cc21=Vibrato Depth
+label_cc24=Swell
+label_cc25=Preroll
+label_cc90=Filter Cutoff
+label_cc91=F Resonance
+label_cc92=F Veltrack
+label_cc93=F Envelope
+label_cc94=F Attack
+label_cc95=F Decay
+label_cc100=Unison Vol
+label_cc101=Unison Width
+label_cc105=Mono Switch
+label_cc112=Vibrato Speed
+label_cc113=Wobble Depth
+label_cc114=Tremolo Depth
+label_cc115=Vibrato Delay
+label_cc116=Vibrato Fade
+label_cc117=Humanize
+
+set_cc90=127
+set_cc95=40
+set_cc101=127
+set_cc112=50
+set_cc115=45
+set_cc116=45
+
+//Center
+
+<global>
+#include "controls/common.sfz"
+seq_length=4
+#include "controls/b_vibrato.sfz"
+#include "controls/filter.sfz"
+
+//Poly
+
+
+//Behind the bridge
+<master>
+hicc105=63
+#include "maps/darkblack_btb_map.sfz"
+
+
+//Mono
+
+
+//Behind the bridge
+<master>
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_btb_map.sfz"
+
+
+
+
+
+
+//Left, highpass
+
+<global>
+#include "controls/common.sfz"
+locc100=1
+amplitude_oncc100=100
+pan_oncc101=-100
+fil2_type=hpf_1p
+cutoff2=250
+seq_length=4
+#include "controls/b_t1_vibrato.sfz"
+#include "controls/filter.sfz"
+
+
+//Behind the bridge
+<master>
+hicc105=63
+#include "maps/t1/darkblack_btb_map.sfz"
+
+
+
+//Mono
+
+
+//Behind the bridge
+<master>
+group=2
+off_by=2
+locc105=64
+#include "maps/t1/darkblack_btb_map.sfz"
+
+
+
+//Right, highpass
+
+<global>
+#include "controls/common.sfz"
+locc100=1
+amplitude_oncc100=100
+pan_oncc101=100
+fil2_type=hpf_1p
+cutoff2=250
+seq_length=4
+#include "controls/b_t2_vibrato.sfz"
+#include "controls/filter.sfz"
+
+
+//Behind the bridge
+<master>
+hicc105=63
+#include "maps/t2/darkblack_btb_map.sfz"
+
+
+
+//Mono
+
+//Behind the bridge
+<master>
+group=3
+off_by=3
+locc105=64
+#include "maps/t2/darkblack_btb_map.sfz"
+
+#include "controls/curves.sfz"

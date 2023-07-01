@@ -1,0 +1,99 @@
+<GUI w="775" h="335">
+
+	<!-- Blue bass GUI with the complete set of controls -->
+ 
+	<!-- Background -->
+
+	<StaticImage x="0" y="0" w="773" h="333" image="blue_control_tab.png" transparent="0"  />
+	
+
+
+	<StaticText x="20" y="35" w="52" h="18" text="Mono" color_text="#2B1E00FF" transparent="1"   />
+	
+	<OnOffButton param="105" x="31" y="55" w="30" h="30" image="blue_button.png" />
+
+	<StaticText x="20" y="85" w="52" h="18" text="Preroll" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="25" x="31" y="105" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="100" y="35" w="52" h="18" text="Swell" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="24" x="111" y="55" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="100" y="85" w="52" h="18" text="Low Str" color_text="#2B1E00FF" transparent="1"   />
+
+	<OnOffButton param="23" x="111" y="105" w="30" h="30" image="blue_button.png" />
+
+
+	<StaticText x="180" y="35" w="52" h="18" text="Unison" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="100" x="191" y="55" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="180" y="85" w="52" h="18" text="Width" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="101" x="191" y="105" image="blue_knob.png" frames="128"  />
+
+
+
+
+
+
+	<StaticText x="370" y="15" w="52" h="18" text="VIBRATO" color_text="#2B1E00FF" transparent="1"   />
+
+	<StaticText x="280" y="35" w="52" h="18" text="Depth" color_text="#2B1E00FF" transparent="1"   />
+
+<Slider param="21"   x="300"  y="60"  w="12" h="133" orientation="vertical"    image_handle="blue_fader_vert.png" image_bg="blue_fader_vert_slot.png"  />
+
+	<StaticText x="340" y="35" w="52" h="18" text="Tremolo" color_text="#2B1E00FF" transparent="1"   />
+
+<Slider param="114"   x="360"  y="60"  w="12" h="133" orientation="vertical"    image_handle="blue_fader_vert.png" image_bg="blue_fader_vert_slot.png"  />
+
+	<StaticText x="400" y="35" w="52" h="18" text="Rate" color_text="#2B1E00FF" transparent="1"   />
+
+<Slider param="112"   x="420"  y="60"  w="12" h="133" orientation="vertical"    image_handle="blue_fader_vert.png" image_bg="blue_fader_vert_slot.png"  />
+
+	<StaticText x="460" y="35" w="52" h="18" text="Delay" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="115" x="471" y="55" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="460" y="85" w="52" h="18" text="Fade" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="116" x="471" y="105" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="460" y="135" w="52" h="18" text="Humanize" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="117" x="471" y="155" image="blue_knob.png" frames="128"  />
+
+
+	<StaticText x="620" y="15" w="52" h="18" text="FILTER" color_text="#2B1E00FF" transparent="1"   />
+
+	<StaticText x="560" y="35" w="52" h="18" text="Cutoff" color_text="#2B1E00FF" transparent="1"   />
+
+<Slider param="90"   x="580"  y="60"  w="12" h="133" orientation="vertical"    image_handle="blue_fader_vert.png" image_bg="blue_fader_vert_slot.png"  />
+
+	<StaticText x="620" y="35" w="52" h="18" text="Reso" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="91" x="631" y="55" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="620" y="85" w="52" h="18" text="Veltrack" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="92" x="631" y="105" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="620" y="135" w="52" h="18" text="Wobble" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="113" x="631" y="155" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="680" y="35" w="52" h="18" text="Depth" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="93" x="691" y="55" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="680" y="85" w="52" h="18" text="Attack" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="94" x="691" y="105" image="blue_knob.png" frames="128"  />
+
+	<StaticText x="680" y="135" w="52" h="18" text="Decay" color_text="#2B1E00FF" transparent="1"   />
+	
+	<Knob param="95" x="691" y="155" image="blue_knob.png" frames="128"  />
+
+
+</GUI>                                                                                                                                       

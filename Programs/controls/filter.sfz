@@ -1,0 +1,32 @@
+//Filter
+//Lowpass filter
+//By default, cutoff modulation is measured in cents
+//To make the modulation not keytrack, we make a kludge
+//Using var
+cutoff=250
+var02_cutoff=9000
+var02_mod=mult
+var02_oncc90=1
+var02_curvecc90=0
+var02_oncc133=1
+var02_curvecc133=12
+fil_keytrack=70
+resonance=0
+resonance_cc91=18
+var01_cutoff=6000 //Velocity track
+var01_mod=mult
+var01_oncc131=1
+var01_oncc92=1
+cutoff_cc92=-3000
+//Pluck envelope
+fileg_depth=0
+fileg_depthcc93=8400
+fileg_sustain=0
+fileg_attack=0
+fileg_attackcc94=0.5
+fileg_decay=0.001
+fileg_decaycc95=2
+
+//Wobble
+lfo01_cutoff=0
+lfo01_cutoff_oncc113=2400

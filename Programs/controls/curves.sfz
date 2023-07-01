@@ -1,0 +1,13 @@
+//Swell vol boost curve
+<curve>
+curve_index=11
+v000=0
+v004=0
+v127=1
+
+//Filter cutoff kludge curve
+<curve>
+curve_index=12
+v000=1
+v035=1
+v77=0.75

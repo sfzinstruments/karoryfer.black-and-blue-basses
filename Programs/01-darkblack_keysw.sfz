@@ -1,0 +1,553 @@
+<control>
+label_cc21=Vibrato Depth
+label_cc24=Swell
+label_cc25=Preroll
+label_cc90=Filter Cutoff
+label_cc91=F Resonance
+label_cc92=F Veltrack
+label_cc93=F Envelope
+label_cc94=F Attack
+label_cc95=F Decay
+label_cc100=Unison Vol
+label_cc101=Unison Width
+label_cc105=Mono Switch
+label_cc107=Release
+label_cc112=Vibrato Speed
+label_cc113=Wobble Depth
+label_cc114=Tremolo Depth
+label_cc115=Vibrato Delay
+label_cc116=Vibrato Fade
+label_cc117=Humanize
+
+set_cc90=127
+set_cc95=40
+set_cc101=127
+set_cc112=50
+set_cc115=45
+set_cc116=45
+
+//Center
+
+<global>
+#include "controls/common.sfz"
+seq_length=4
+#include "controls/b_vibrato.sfz"
+sw_lokey=27
+sw_hikey=31
+sw_default=31
+#include "controls/filter.sfz"
+
+//Poly
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+hicc105=63
+#include "maps/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+hicc105=63
+#include "maps/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+hicc105=63
+#include "maps/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+hicc105=63
+#include "maps/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+hicc105=63
+#include "maps/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+hicc105=63
+#include "maps/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+hicc105=63
+#include "maps/darkblack_btb_open_map.sfz"
+
+
+//Mono
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+locc105=64
+group=1
+off_by=1
+#include "maps/darkblack_btb_open_map.sfz"
+
+//Releases are center-only and don't care about mono or poly
+//Pluck artic only
+<master>
+sw_last=31
+sw_label=Pluck
+trigger=release
+locc107=1
+amplitude_cc107=100
+ampeg_attack=0.005
+rt_decay=4
+//Keep from overtriggering when unison is on
+group=501
+note_polyphony=1
+//Do we need to add hicc24 to prevent triggering in swell mode?
+#include "maps/darkblack_rel_map.sfz"
+
+
+
+//Left, highpass
+
+<global>
+#include "controls/common.sfz"
+locc100=1
+amplitude_oncc100=100
+pan_oncc101=-100
+fil2_type=hpf_1p
+cutoff2=250
+seq_length=4
+#include "controls/b_t1_vibrato.sfz"
+sw_lokey=27
+sw_hikey=31
+sw_default=31
+#include "controls/filter.sfz"
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+hicc105=63
+#include "maps/t1/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/t1/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+hicc105=63
+#include "maps/t1/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+hicc105=63
+#include "maps/t1/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/t1/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+hicc105=63
+#include "maps/t1/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+hicc105=63
+#include "maps/t1/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+hicc105=63
+#include "maps/t1/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+hicc105=63
+#include "maps/t1/darkblack_btb_open_map.sfz"
+
+
+//Mono
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+locc105=64
+group=2
+off_by=2
+#include "maps/t1/darkblack_btb_open_map.sfz"
+
+
+
+//Right, highpass
+
+<global>
+#include "controls/common.sfz"
+locc100=1
+amplitude_oncc100=100
+pan_oncc101=100
+fil2_type=hpf_1p
+cutoff2=250
+seq_length=4
+#include "controls/b_t2_vibrato.sfz"
+sw_lokey=27
+sw_hikey=31
+sw_default=31
+#include "controls/filter.sfz"
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+hicc105=63
+#include "maps/t2/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/t2/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+hicc105=63
+#include "maps/t2/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+hicc105=63
+#include "maps/t2/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+hicc105=63
+#include "maps/t2/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+hicc105=63
+#include "maps/t2/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+hicc105=63
+#include "maps/t2/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+hicc105=63
+#include "maps/t2/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+hicc105=63
+#include "maps/t2/darkblack_btb_open_map.sfz"
+
+
+//Mono
+
+//Regular plucks
+<master>
+sw_last=31
+sw_label=Pluck
+hivel=31
+amp_velcurve_31=1
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_reg_p_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=32
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_reg_mp_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=64
+hivel=95
+amp_velcurve_95=1
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_reg_mf_map.sfz"
+<master>
+sw_last=31
+sw_label=Pluck
+lovel=96
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_reg_f_map.sfz"
+
+//Ghost notes
+<master>
+sw_last=30
+sw_label=Ghost
+hivel=63
+amp_velcurve_63=1
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_ghost_p_map.sfz"
+<master>
+sw_last=30
+sw_label=Ghost
+lovel=64
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_ghost_f_map.sfz"
+
+//Staccato
+<master>
+sw_last=29
+sw_label=Staccato
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_stac_map.sfz"
+
+//Behind the bridge
+<master>
+sw_last=28
+sw_label=Behind the bridge
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_btb_map.sfz"
+
+<master>
+sw_last=27
+sw_label=Behind the bridge open
+locc105=64
+group=3
+off_by=3
+#include "maps/t2/darkblack_btb_open_map.sfz"
+
+#include "controls/curves.sfz"

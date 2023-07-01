@@ -1,0 +1,24 @@
+//Vibrato for right voice
+lfo01_pitch_oncc21=25 //Vibrato LFO
+lfo01_freq=0.8 //Can go very slow
+lfo01_freq_oncc112=7.2 //8 Hz is about as fast as vibrato on cello can go
+lfo01_delay_oncc115=0.550
+lfo01_fade_oncc116=0.650
+lfo01_volume_oncc114=8
+
+lfo02_wave=1 //Second LFO to make things wobblier
+lfo02_phase=0.51
+lfo02_phase_oncc135=0.397 //Randomized
+lfo02_freq=0.012 //Basically no movement at very slow speeds, just randomization
+lfo02_freq_oncc117=1 //Max rate is not very high, so it doesn't sound too obvious
+lfo02_pitch_oncc117=-3 //Pitch wobbliness
+lfo02_freq_lfo01_oncc117=0.38
+lfo02_freq_lfo01_oncc112=0.81 //Affect the rate of the other LFO for unsteady vibrato
+
+lfo03_wave=1 //And a third LFO for secondhand complex wobbliness
+lfo03_phase=0.537
+lfo03_phase_oncc131=0.332 //Different phase response to velocity than the second LFO
+lfo03_freq=0.42
+lfo03_freq_oncc117=-0.29
+lfo03_freq_lfo2_oncc117=2.03
+lfo03_pitch_oncc117=4

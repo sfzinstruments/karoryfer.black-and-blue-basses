@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<Key>5D23DD42C2C3849E44EB9F19EE5E6B147E6FD545416F88B911F4AF5B0C2EA49FF0E3F4D82EF7B5D9187B46A6ACAAA474DBCD7DA08A9693D4F9CD3DA4DCC94BE2CE34C771A40C9D00111A571FCF501E2BC161FDCC54546C0E20293A55205F18342FB96543594AB8D2289002FC0FD7F9DB9769DFB241A8680E8ECEF6F266830E67D1433535CC65557D0C36C8B6B0BC0D21135E7F5A550FD375DA206849DB238D094CBA51C3F5626B965D3F953BD74429B02306DBF294F030E15039F72D12F681241D2AF04FE86FBD618DD4BE62107FAB6A3542B28E5C4B08C5EDED1CA1B5BED174EA5A91155214D5155C3117F506E56E397D3C6BE92B885A4657648B463A3ECD48</Key>
+<AriaBank id="2567" name="Black And Blue Basses" vendor="Karoryfer" product="Black And Blue Basses" version="1000" >
+
+	<Define name="$sample_dir" value="../Samples"/>
+	
+	<!-- branding for Aria Player and sforzando UIs -->
+	<AriaGUI path="GUI/aria_info.xml"  target="*ARIA_INFO" />	
+ 
+	<AriaProgram  name="01 - dark black keyswitch normal"        gui="GUI/01-darkblack_keysw.xml">
+	<AriaElement  path="Programs/01-darkblack_keysw.sfz"/>   	</AriaProgram>
+		
+	<AriaProgram  name="02 - dark black keyswitch warm"  gui="GUI/02-darkblack_keysw_warm.xml" >
+	<AriaElement  path="Programs/02-darkblack_keysw_warm.sfz"/>	</AriaProgram>
+		
+	<AriaProgram  name="03 - baby blue normal"     gui="GUI/03-babyblue_all.xml" >
+	<AriaElement  path="Programs/03-babyblue_all.sfz"/>	</AriaProgram>
+		
+	<AriaProgram  name="04 - baby blue warm"     gui="GUI/04-babyblue_warm.xml" >
+	<AriaElement  path="Programs/04-babyblue_warm.sfz"/>	</AriaProgram>
+		
+	<AriaProgram  name="05 - dark black pluck normal"     gui="GUI/05-darkblack_pluck.xml" >
+	<AriaElement  path="Programs/05-darkblack_pluck.sfz"/>	</AriaProgram>
+		
+	<AriaProgram  name="06 - dark black pluck warm"     gui="GUI/06-darkblack_pluck_warm.xml" >
+	<AriaElement  path="Programs/06-darkblack_pluck_warm.sfz"/>	</AriaProgram>		
+
+	<AriaProgram  name="07 - dark black ghost"     gui="GUI/07-darkblack_ghost.xml" >
+	<AriaElement  path="Programs/07-darkblack_ghost.sfz"/>	</AriaProgram>
+		
+	<AriaProgram  name="08 - dark black ghost warm"     gui="GUI/08-darkblack_ghost_warm.xml" >
+	<AriaElement  path="Programs/08-darkblack_ghost_warm.sfz"/>	</AriaProgram>
+
+	<AriaProgram  name="09 - dark black staccato"     gui="GUI/09-darkblack_stac.xml" >
+	<AriaElement  path="Programs/09-darkblack_stac.sfz"/>	</AriaProgram>
+
+	<AriaProgram  name="10 - dark black behind the bridge"     gui="GUI/10-darkblack_btb.xml" >
+	<AriaElement  path="Programs/10-darkblack_btb.sfz"/>	</AriaProgram>
+
+	<AriaProgram  name="11 - dark black behind the bridge open"     gui="GUI/11-darkblack_btb_open.xml" >
+	<AriaElement  path="Programs/11-darkblack_btb_open.sfz"/>	</AriaProgram>
+</AriaBank>
