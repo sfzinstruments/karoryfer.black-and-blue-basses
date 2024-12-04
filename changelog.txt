@@ -1,5 +1,8 @@
-Version 1.001:
+Version 1.002:
 Release control now works.
+
+Version 1.001:
+Bugfix, the details of which are lost in time.
 
 Version 1.000:
 Initial release.
