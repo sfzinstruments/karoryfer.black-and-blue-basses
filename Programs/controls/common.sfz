@@ -3,6 +3,7 @@ ampeg_attack=0.001
 ampeg_attack_oncc24=1
 ampeg_release=0.25
 ampeg_release_oncc24=1
+ampeg_release_oncc107=1
 volume_oncc24=7
 volume_curvecc24=11
 offset_oncc25=882
